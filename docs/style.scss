@@ -1,4 +1,89 @@
 
+@font-face{
+    font-family: 'jaapokki-subtract';
+    src: url('src/jaapokki-subtract.ttf') format('truetype');
+    src: url('src/jaapokki-subtract.woff') format('woff');
+}
+
+body {
+    font-family: 'lato', sans-serif!important;
+    --header-height: 124px;
+
+    margin: var(--header-height) 0 0 0;
+}
+
+
 h1 {
+    font-family: 'jaapokki-subtract';
     color: purple;
+}
+
+/*** sidebar**/
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--header-height);
+    background: black;
+    display:flex;
+
+    button {
+        width: 60px;
+        background:url('http://198.199.113.201/colombiartesanal/wp-content/themes/ca-theme/img/menu.jpg');
+        background-size: cover;
+        background-position: bottom center;
+        background-repeat: no-repeat;
+
+        border-style: none;
+    }
+}
+
+.nav{
+    .nav__links{
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 2;
+        height: 100vh;
+        width: 250px;
+        background: #1e1e1e;
+
+        padding-top: 50px;
+
+        :last-child {
+            img {
+               height: 21px!important; ;
+            }
+        }
+
+        a:hover img{
+            height: 30px;
+        }
+    }
+
+    .nav__link{
+        display: flex;
+        align-items: center;
+
+        text-decoration: none;
+            color: #e7af3e;
+        font-size: 20px;
+        line-height: 1.3em;
+        
+        margin-left: 20px;
+        margin-top: 8px;
+        margin-right: 20px;
+
+
+        border-bottom: .5px solid rgb(53, 53, 53);
+        img {
+            height: 26px;
+            
+            margin-right: 5px;
+        }
+
+        
+
+    }
 }
