@@ -29,17 +29,113 @@ h1 {
     display:flex;
 
     button {
-        width: 60px;
+        width: 61px;
+        background-color: black;
         background:url('http://198.199.113.201/colombiartesanal/wp-content/themes/ca-theme/img/menu.jpg');
         background-size: cover;
         background-position: bottom center;
         background-repeat: no-repeat;
 
+        height: 100%;
         border-style: none;
+
+    }
+
+    .header__button:active{
+        transform: translateX(-60px);
+        transition: transform .5s;
+    }
+
+    .logo > img {
+        width: 50%;
+        margin-top: 20px;
+    }
+
+    .user-menu {
+
+        a {
+            width: 23px;
+            height: 23px;
+        }
+        .buscar-icon{
+            background-image: url('http://198.199.113.201/colombiartesanal/wp-content/themes/ca-theme/img/icons/ico_lupa.svg'); 
+        }
+
+        .registro-icon {
+            background-image: url('http://198.199.113.201/colombiartesanal/wp-content/themes/ca-theme/img/icons/ico_usuario.svg')
+        }
+
+        .favoritos-icon {
+            background-image: url('http://198.199.113.201/colombiartesanal/wp-content/themes/ca-theme/img/icons/ico_corazon.svg')
+        }
+
+        a:hover {
+            width: 27px;
+            height: 27px;
+        }
     }
 }
 
+ .nav--open {
+
+    .nav__links{
+    transform: translateX(0)!important; 
+    transition: transform .5s;
+    }
+
+    .nav__overlay {
+        visibility: visible;
+        opacity: 1;
+    }
+}
+
+.nav__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    background: rgba(0,0,0,0.4);
+    visibility: hidden;
+    opacity: 0;
+    
+}
+
+
+.cerrar-nav:hover{
+        
+    transform: rotate(90deg)!important;
+    transition: transform 0.5s;
+
+}
+
 .nav{
+
+    .nav-header {
+        color: #e7af3e;
+        text-decoration: none;
+        font-size: 1.4em;
+        letter-spacing: .1px;
+
+        margin-bottom: 47px;
+
+         img {
+            height:25px;
+            margin-bottom: 6px;
+            margin-right: 25px;
+            margin-left: 30px;
+
+            
+        }
+        
+    
+        
+    }
+
+
+
+    
     .nav__links{
         position: fixed;
         top: 0;
@@ -48,12 +144,16 @@ h1 {
         height: 100vh;
         width: 380px;
         background: #1e1e1e;
+        
+        transform: translateX(-380px);
+        transition: transform .5s;
+        
 
-        padding-top: 50px;
+        padding-top: 26px;
 
-        :last-child {
+        :nth-child(12){
             img {
-               height: 21px!important; ;
+               height: 21px;
             }
         }
 
@@ -81,7 +181,7 @@ h1 {
         padding-bottom: 5px;
         
         border-bottom: .5px solid rgb(53, 53, 53);
-        width: 80%;
+        width: 87%;
         img {
             height: 26px;
             

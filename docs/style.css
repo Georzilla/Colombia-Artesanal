@@ -29,12 +29,99 @@ h1 {
 }
 
 .header button {
-  width: 60px;
+  width: 61px;
+  background-color: black;
   background: url("http://198.199.113.201/colombiartesanal/wp-content/themes/ca-theme/img/menu.jpg");
   background-size: cover;
   background-position: bottom center;
   background-repeat: no-repeat;
+  height: 100%;
   border-style: none;
+}
+
+.header .header__button:active {
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.header .logo > img {
+  width: 50%;
+  margin-top: 20px;
+}
+
+.header .user-menu a {
+  width: 23px;
+  height: 23px;
+}
+
+.header .user-menu .buscar-icon {
+  background-image: url("http://198.199.113.201/colombiartesanal/wp-content/themes/ca-theme/img/icons/ico_lupa.svg");
+}
+
+.header .user-menu .registro-icon {
+  background-image: url("http://198.199.113.201/colombiartesanal/wp-content/themes/ca-theme/img/icons/ico_usuario.svg");
+}
+
+.header .user-menu .favoritos-icon {
+  background-image: url("http://198.199.113.201/colombiartesanal/wp-content/themes/ca-theme/img/icons/ico_corazon.svg");
+}
+
+.header .user-menu a:hover {
+  width: 27px;
+  height: 27px;
+}
+
+.nav--open .nav__links {
+  -webkit-transform: translateX(0) !important;
+          transform: translateX(0) !important;
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+}
+
+.nav--open .nav__overlay {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  visibility: hidden;
+  opacity: 0;
+}
+
+.cerrar-nav:hover {
+  -webkit-transform: rotate(90deg) !important;
+          transform: rotate(90deg) !important;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: -webkit-transform 0.5s;
+  transition: transform 0.5s;
+  transition: transform 0.5s, -webkit-transform 0.5s;
+}
+
+.nav .nav-header {
+  color: #e7af3e;
+  text-decoration: none;
+  font-size: 1.4em;
+  letter-spacing: .1px;
+  margin-bottom: 47px;
+}
+
+.nav .nav-header img {
+  height: 25px;
+  margin-bottom: 6px;
+  margin-right: 25px;
+  margin-left: 30px;
 }
 
 .nav .nav__links {
@@ -45,11 +132,17 @@ h1 {
   height: 100vh;
   width: 380px;
   background: #1e1e1e;
-  padding-top: 50px;
+  -webkit-transform: translateX(-380px);
+          transform: translateX(-380px);
+  -webkit-transition: -webkit-transform .5s;
+  transition: -webkit-transform .5s;
+  transition: transform .5s;
+  transition: transform .5s, -webkit-transform .5s;
+  padding-top: 26px;
 }
 
-.nav .nav__links :last-child img {
-  height: 21px !important;
+.nav .nav__links :nth-child(12) img {
+  height: 21px;
 }
 
 .nav .nav__links a:hover img {
@@ -72,7 +165,7 @@ h1 {
   margin-right: 20px;
   padding-bottom: 5px;
   border-bottom: 0.5px solid #353535;
-  width: 80%;
+  width: 87%;
 }
 
 .nav .nav__link img {
